@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main()
+{
+
+printf("Enter five integers:\n");
+int a, b, c, d, e;
+scanf("%i %i %i %i %i", &a, &b, &c, &d, &e);
+int sum = (a + b + c + d + e);
+double mean = (double) sum / 5;
+printf("\n The mean is %f \n", mean);
+
+int nums[5]={a, b, c, d, e};
+int ordered[5];
+
+
+for(int j=0; j < 5; j++){
+         int largest = nums[0];
+         int index = 0;
+
+
+for(int i=0; i < 5; i++){
+        if(nums[i] > largest){
+                      largest = nums [i];
+                      index=i;
+                }
+        }
+        
+        ordered[j] = largest;
+        nums [index] = 0;
+}
+        printf("\n The median is %i \n", ordered[2]);
+
+
+
+int count = 1;
+int mode = -1;
+int maxcount = 1;
+for(int i=1; i < 5; i++){
+           if(ordered[i] == ordered [i-1]){
+                  count++;
+                  if(count > maxcount){
+                          maxcount = count;
+                          mode = ordered[i];
+                 }
+         }
+         else{
+                  count =1;
+         }
+}
+if(mode == -1){
+         printf("\n There is no mode \n");
+}
+else{
+printf("\n The Mode is %i \n", mode);
+}
+return(0);
+}
