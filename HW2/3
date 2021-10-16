@@ -1,0 +1,28 @@
+int main()
+{
+       printf("Enter a decimal value ");
+
+       float a;
+
+       scanf("%f", &a);
+
+       printf("The value you entered is: %d\n", a);
+
+       printf("Enter an integer value: ");
+
+       int b;
+
+       scanf("%d", &b);
+
+       printf("The value you entered is %f\n", b);
+
+       printf("Enter a character: ");
+
+       char c;
+
+       scanf("%c", &c);
+
+       printf("The character you entered is: %d\n", c);
+
+       return 0;
+}
