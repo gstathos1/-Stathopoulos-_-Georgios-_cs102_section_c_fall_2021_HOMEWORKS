@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+
+int main()
+{
+       printf("Enter an integer value of cents: ");
+
+       int c;
+
+       scanf("%d", &c);
+
+       int q, d, n, p;
+
+       q= c/25;
+
+       c = c - (25*q);
+
+       d= c/10;
+
+       c = c - (10*d),
+
+       n = c/5;
+
+       c = c - (5*n);
+
+       p = c,
+
+       printf("The minimum number of quarters, dimes, nickels, and pennies you can have are: %d quarters %d dimes %    d nickels %d pennies \n", q, d, n, p);
+       
+       return 0;
+      
+}
