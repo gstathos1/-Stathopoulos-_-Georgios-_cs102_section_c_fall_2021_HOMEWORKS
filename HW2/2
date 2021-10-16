@@ -1,0 +1,18 @@
+ #include <stdio.h>
+
+
+ int main()
+ {
+        printf("Enter an amount of time in terms of minutes: ");
+        int n;
+
+        scanf("%d", &n);
+        int h, m;
+
+        h= n/60;
+        m= n - (h*60);
+ 
+        printf("That time in terms of minutes and hours is: %d hours and %d minutes. \n", h, m);
+ 
+        return 0;
+}
